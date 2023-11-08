@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: ./cgd_api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - pgsqldb
+  dash_builder:
+    build:
+      context: ./cgd_web
+      dockerfile: Dockerfile
+    restart: "no"
+    command: ["bash", "-c", "rm -rf /build/* && cp -r /app/dist/* /build"]
+    volumes:
+      - dash_build:/build
+
+  pgsqldb:
+    image: postgres
+    container_name: pg-sql
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: difan
+      POSTGRES_PASSWORD: password
+
+  reverse_proxy:
+    image: nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - dash_build:/www/dash
+      - "./nginx/local_dev.conf:/etc/nginx/conf.d/default.conf"
+      - "/etc/ssl/private:/etc/ssl/certs/nginx/"
+
+volumes:
+  dash_build:
+  pgsqldb:
