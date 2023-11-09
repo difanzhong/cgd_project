@@ -18,7 +18,7 @@ function FormProjects() {
   const fetchProjectResult = async (data) => {
     try {
       const projectResult = await projectService.post(data);
-      console.log(projectResult);
+      // console.log(projectResult);
       if (projectResult.status_code >= 400) setError(authResult.detail);
     } catch (error) {
       console.log(error);
@@ -26,7 +26,7 @@ function FormProjects() {
   };
 
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     await fetchProjectResult(data);
   };
 

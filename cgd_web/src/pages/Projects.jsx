@@ -56,10 +56,16 @@ function Projects() {
             {/* Welcome banner */}
             <WelcomeBanner />
             <div className="grid grid-rows-2 grid-flow-col gap-4">
-              <div className="row-span-2">
-                <h2 className="text-xl">现有项目</h2>
-                <ul className="mt-10">{ProjectListItem}</ul>
-              </div>
+              {ProjectListItem.length > 0 ? (
+                <div className="row-span-2">
+                  <h2 className="text-xl">现有项目</h2>
+                  <ul className="mt-10">{ProjectListItem}</ul>
+                </div>
+              ) : (
+                <div className="row-span-2">
+                  <h2 className="text">请新建一个项目</h2>
+                </div>
+              )}
               <div className="row-span-2"></div>
               <div className="row-span-2">
                 <FormProjects />

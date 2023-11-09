@@ -21,7 +21,7 @@ function Header({ sidebarOpen, setSidebarOpen, project_id }) {
 
           {/* Header: Right side */}
           <div className="flex items-center space-x-3">
-            <div>
+            {/* <div>
               <button
                 className={`w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600/80 rounded-full ml-3 ${
                   searchModalOpen && "bg-slate-200"
@@ -57,7 +57,7 @@ function Header({ sidebarOpen, setSidebarOpen, project_id }) {
             </div>
 
             <Notifications align="right" />
-            <Help align="right" />
+            <Help align="right" /> */}
             <ThemeToggle />
             {/*  Divider */}
             <hr className="w-px h-6 bg-slate-200 dark:bg-slate-700 border-none" />

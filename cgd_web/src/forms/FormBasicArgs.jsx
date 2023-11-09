@@ -41,11 +41,9 @@ function FormBasicArgs({ project_id }) {
 
   const onSubmit = (data) => {
     data.project_id = project_id;
-    console.log();
+    // console.log();
     if (isDirty) {
       data.id ? basicArgsService.put(data) : basicArgsService.post(data);
-    } else {
-      console.log("no change");
     }
   };
 

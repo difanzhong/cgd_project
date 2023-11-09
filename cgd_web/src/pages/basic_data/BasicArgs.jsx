@@ -34,7 +34,6 @@ function BasicArgs() {
             <FormInvestment project_id={project_id} />
           </div>
         </main>
-        <Banner />
       </div>
     </div>
   );

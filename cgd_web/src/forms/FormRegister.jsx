@@ -23,7 +23,7 @@ function Register() {
   const fetchAuthResult = async (data) => {
     try {
       const authResult = await authService.register(data);
-      console.log(authResult);
+      // console.log(authResult);
       if (authResult.status_code >= 400) setError(authResult.detail);
     } catch (error) {
       console.log(error);

@@ -21,9 +21,9 @@ function Login() {
   const fetchAuthResult = async (data) => {
     try {
       const authResult = await authService.getToken(data);
-      console.log(authResult);
+      // console.log(authResult);
       cookies.set("access_token", authResult.access_token);
-      console.log("cookies", cookies.get("access_token"));
+      // console.log("cookies", cookies.get("access_token"));
       nav("/");
     } catch (error) {
       console.log(error);

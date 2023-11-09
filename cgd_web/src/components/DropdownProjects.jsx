@@ -85,7 +85,6 @@ function DropdownProjects({ align, project_id }) {
         <div className="flex items-center truncate">
           <span className="truncate ml-2 text-sm font-medium dark:text-slate-300 group-hover:text-slate-800 dark:group-hover:text-slate-200">
             {CurrentProjectObj ? CurrentProjectObj.name : "项目"}
-            {console.log(CurrentProjectObj)}
           </span>
           <svg
             className="w-3 h-3 shrink-0 ml-1 fill-current text-slate-400"

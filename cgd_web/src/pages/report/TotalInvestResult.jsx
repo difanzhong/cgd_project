@@ -309,8 +309,6 @@ const TotalInvestResult = () => {
             </table>
           </div>
         </main>
-
-        <Banner />
       </div>
     </div>
   );

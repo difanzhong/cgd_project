@@ -147,48 +147,30 @@ function Sidebar({ sidebarOpen, setSidebarOpen, project_id }) {
             <ul className="mt-3">
               <li
                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
-                  pathname.includes("basic_arg") && "bg-slate-900"
+                  pathname.includes("args") && "bg-slate-900"
                 }`}
               >
                 <NavLink
                   end
                   to={`/projects/${project_id}/basic-args`}
                   className={`block text-slate-200 truncate transition duration-150 ${
-                    pathname.includes("basic_arg")
+                    pathname.includes("args")
                       ? "hover:text-slate-200"
                       : "hover:text-white"
                   }`}
                 >
                   <div className="flex items-center">
-                    {/* <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("inbox")
-                            ? "text-indigo-500"
-                            : "text-slate-600"
-                        }`}
-                        d="M16 13v4H8v-4H0l3-9h18l3 9h-8Z"
-                      />
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("basic-args")
-                            ? "text-indigo-300"
-                            : "text-slate-400"
-                        }`}
-                        d="m23.72 12 .229.686A.984.984 0 0 1 24 13v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-8c0-.107.017-.213.051-.314L.28 12H8v4h8v-4H23.72ZM13 0v7h3l-4 5-4-5h3V0h2Z"
-                      />
-                    </svg> */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth={1.5}
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      className="w-6 h-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
                       />
                     </svg>
@@ -201,48 +183,30 @@ function Sidebar({ sidebarOpen, setSidebarOpen, project_id }) {
               </li>
               <li
                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
-                  pathname.includes("inbox") && "bg-slate-900"
+                  pathname.includes("source") && "bg-slate-900"
                 }`}
               >
                 <NavLink
                   end
                   to={`/projects/${project_id}/capital-source`}
                   className={`block text-slate-200 truncate transition duration-150 ${
-                    pathname.includes("capital")
+                    pathname.includes("source")
                       ? "hover:text-slate-200"
                       : "hover:text-white"
                   }`}
                 >
                   <div className="flex items-center">
-                    {/* <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("capital")
-                            ? "text-indigo-500"
-                            : "text-slate-600"
-                        }`}
-                        d="M16 13v4H8v-4H0l3-9h18l3 9h-8Z"
-                      />
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("capital")
-                            ? "text-indigo-300"
-                            : "text-slate-400"
-                        }`}
-                        d="m23.72 12 .229.686A.984.984 0 0 1 24 13v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-8c0-.107.017-.213.051-.314L.28 12H8v4h8v-4H23.72ZM13 0v7h3l-4 5-4-5h3V0h2Z"
-                      />
-                    </svg> */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth={1.5}
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      className="w-6 h-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
                       />
                     </svg>
@@ -268,35 +232,17 @@ function Sidebar({ sidebarOpen, setSidebarOpen, project_id }) {
                   }`}
                 >
                   <div className="flex items-center">
-                    {/* <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("cost")
-                            ? "text-indigo-500"
-                            : "text-slate-600"
-                        }`}
-                        d="M16 13v4H8v-4H0l3-9h18l3 9h-8Z"
-                      />
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("cost")
-                            ? "text-indigo-300"
-                            : "text-slate-400"
-                        }`}
-                        d="m23.72 12 .229.686A.984.984 0 0 1 24 13v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-8c0-.107.017-.213.051-.314L.28 12H8v4h8v-4H23.72ZM13 0v7h3l-4 5-4-5h3V0h2Z"
-                      />
-                    </svg> */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth={1.5}
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      className="w-6 h-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
@@ -326,56 +272,30 @@ function Sidebar({ sidebarOpen, setSidebarOpen, project_id }) {
               {/* Authentication */}
               <li
                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
-                  pathname.includes("inbox") && "bg-slate-900"
+                  pathname.includes("expense") && "bg-slate-900"
                 }`}
               >
                 <NavLink
                   end
                   to={`/projects/${project_id}/expense-result`}
                   className={`block text-slate-200 truncate transition duration-150 ${
-                    pathname.includes("inbox")
+                    pathname.includes("expense")
                       ? "hover:text-slate-200"
                       : "hover:text-white"
                   }`}
                 >
                   <div className="flex items-center">
-                    {/* <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("expense")
-                            ? "text-indigo-500"
-                            : "text-slate-600"
-                        }`}
-                        d="M8 1v2H3v19h18V3h-5V1h7v23H1V1z"
-                      />
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("expense")
-                            ? "text-indigo-500"
-                            : "text-slate-600"
-                        }`}
-                        d="M1 1h22v23H1z"
-                      />
-                      <path
-                        className={`fill-current ${
-                          pathname.includes("expense")
-                            ? "text-indigo-300"
-                            : "text-slate-400"
-                        }`}
-                        d="M15 10.586L16.414 12 11 17.414 7.586 14 9 12.586l2 2zM5 0h14v4H5z"
-                      />
-                    </svg> */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth={1.5}
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      className="w-6 h-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                       />
                     </svg>
@@ -388,14 +308,14 @@ function Sidebar({ sidebarOpen, setSidebarOpen, project_id }) {
               </li>
               <li
                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
-                  pathname.includes("inbox") && "bg-slate-900"
+                  pathname.includes("invest") && "bg-slate-900"
                 }`}
               >
                 <NavLink
                   end
                   to={`/projects/${project_id}/invest-result`}
                   className={`block text-slate-200 truncate transition duration-150 ${
-                    pathname.includes("inbox")
+                    pathname.includes("invest")
                       ? "hover:text-slate-200"
                       : "hover:text-white"
                   }`}
@@ -405,13 +325,13 @@ function Sidebar({ sidebarOpen, setSidebarOpen, project_id }) {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth={1.5}
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      className="w-6 h-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                       />
                     </svg>
