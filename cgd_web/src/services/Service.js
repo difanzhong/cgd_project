@@ -1,6 +1,6 @@
 class Service {
-    constructor(){
-        this.base_url = "http://localhost:8000/api/v1";
-    }
+  constructor() {
+    this.base_url = "http://cgd_project_api_1:8000/api/v1";
+  }
 }
 export default Service;
